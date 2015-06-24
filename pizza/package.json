@@ -1,0 +1,10 @@
+{
+  "name": "pizza-service",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Service to order pizzas and (eventually) get status",
+  "author": "Michael Rice <me@michaelrice.com>",
+  "dependencies": {
+    "express": ">=4.12.0"
+  }
+}

@@ -1,0 +1,23 @@
+id: "pizza-controller"
+kind: "ReplicationController"
+apiVersion: "v1beta1"
+desiredState:
+  replicas: 1
+  replicaSelector:
+    selectorname: "pizza"
+  podTemplate:
+    desiredState:
+      manifest:
+        version: "v1beta1"
+        id: "pizza-controller"
+        containers:
+          - name: "pizzapod"
+            image: "mrice/pizza-service"
+            ports:
+              - containerPort: 3002
+                hostPort: 47002
+    labels:
+      name: "pizza"
+      selectorname: "pizza"
+  labels:
+    name: "pizza"

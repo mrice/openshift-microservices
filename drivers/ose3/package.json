@@ -1,0 +1,10 @@
+{
+  "name": "driver-service",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Service to schedule pizza drivers and get status",
+  "author": "Michael Rice <me@michaelrice.com>",
+  "dependencies": {
+    "express": ">=4.12.0"
+  }
+}

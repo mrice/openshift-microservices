@@ -1,0 +1,36 @@
+{
+   "kind":"ReplicationController",
+   "apiVersion":"v1beta3",
+   "metadata":{
+      "name":"driver",
+      "labels":{
+         "name":"driver"
+      }
+   },
+   "spec":{
+      "replicas":1,
+      "selector":{
+         "name":"driver"
+      },
+      "template":{
+         "metadata":{
+            "labels":{
+               "name":"driver"
+            }
+         },
+         "spec":{
+            "containers":[
+               {
+                  "name":"driver-container",
+                  "image":"mrice/driver-service",
+                  "ports":[
+                     {
+                        "containerPort":3001
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}

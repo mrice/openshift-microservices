@@ -1,0 +1,21 @@
+{
+   "kind":"Service",
+   "apiVersion":"v1beta3",
+   "metadata":{
+      "name":"driver",
+      "labels":{
+         "name":"driver"
+      }
+   },
+   "spec":{
+      "ports": [
+        {
+          "port":3001,
+          "targetPort":3001
+        }
+      ],
+      "selector":{
+         "name":"driver"
+      }
+   }
+}

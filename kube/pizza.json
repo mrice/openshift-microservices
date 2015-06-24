@@ -1,0 +1,36 @@
+{
+   "kind":"ReplicationController",
+   "apiVersion":"v1beta3",
+   "metadata":{
+      "name":"pizza",
+      "labels":{
+         "name":"pizza"
+      }
+   },
+   "spec":{
+      "replicas":1,
+      "selector":{
+         "name":"pizza"
+      },
+      "template":{
+         "metadata":{
+            "labels":{
+               "name":"pizza"
+            }
+         },
+         "spec":{
+            "containers":[
+               {
+                  "name":"pizza-container",
+                  "image":"mrice/pizza-service",
+                  "ports":[
+                     {
+                        "containerPort":3002
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}
